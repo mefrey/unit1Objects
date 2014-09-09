@@ -39,7 +39,11 @@ public class TurtleWorld
         turtle2.turn(45);
         turtle1.forward(50);
         turtle2.forward(50);
-        turtle1.setPicture(turtlepic1);
-        turtle2.setPicture(turtlepic2);
+        turtle1.turn(135);
+        turtle2.turn(-45);
+        turtle1.drop(turtlepic1);
+        turtle2.drop(turtlepic2);
+        turtle1.hide();
+        turtle2.hide();
     }
 }
