@@ -5,6 +5,8 @@ public class TurtleWorld
     public static void main(String args[])
     {
         Picture background = new Picture("turtleback.jpg");
+        Picture turtlepic1 = new Picture("turtle1.jpg");
+        Picture turtlepic2 = new Picture("turtle2.jpg");
         World turtleWorld = new World(599,449);
         turtleWorld.setPicture(background);
         Turtle turtle1 = new Turtle(100,200,turtleWorld);
@@ -12,12 +14,12 @@ public class TurtleWorld
         turtle1.setName("Buster 1");
         turtle2.setName("Buster 2");
         turtle1.setShellColor(Color.blue);
-        turtle1.setColor(Color.orange);
+        turtle1.setBodyColor(Color.orange);
+        turtle2.setShellColor(Color.orange);
+        turtle2.setBodyColor(Color.blue);
         turtle1.setPenColor(Color.blue);
         turtle1.setPenWidth(5);
         turtle2.setPenWidth(5);
-        turtle2.setShellColor(Color.orange);
-        turtle2.setColor(Color.blue);
         turtle2.setPenColor(Color.orange);
         turtle1.penDown();
         turtle2.penDown();
@@ -37,5 +39,7 @@ public class TurtleWorld
         turtle2.turn(45);
         turtle1.forward(50);
         turtle2.forward(50);
+        turtle1.setPicture(turtlepic1);
+        turtle2.setPicture(turtlepic2);
     }
 }
